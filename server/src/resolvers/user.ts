@@ -152,7 +152,7 @@ export class UserResolver {
       //remove the session in redis`
       req.session.destroy((err) => {
         res.clearCookie("qid", {
-          maxAge: 1000 * 60 * 60 * 24 * 365 * 10,
+          // maxAge: 1000 * 60 * 60 * 24 * 365 * 10,
           httpOnly: true,
           sameSite: "lax",
           secure: __prod__,
