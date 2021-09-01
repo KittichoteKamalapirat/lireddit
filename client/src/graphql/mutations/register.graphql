@@ -1,0 +1,13 @@
+# .graphql just to get some nice syntax highlight
+
+mutation Register($username: String!, $password: String!) {
+  register(data: { username: $username, password: $password }) {
+    errors {
+      field
+      message
+    }
+    user {
+      ...RegularUser
+    }
+  }
+}

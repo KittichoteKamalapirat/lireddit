@@ -1,0 +1,13 @@
+#  UsernamePasswordInput is an object
+mutation Login($data: UsernamePasswordInput!) {
+  login(data: $data) {
+    #   └ data: has to match data key
+    errors {
+      field
+      message
+    }
+    user {
+      ...RegularUser
+    }
+  }
+}
